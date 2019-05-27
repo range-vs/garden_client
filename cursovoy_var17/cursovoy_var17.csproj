@@ -31,8 +31,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>cursovoy_var17.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,23 +48,154 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="DataBaseForm\DecoratorsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="DataBaseForm\DecoratorsForm.Designer.cs">
+      <DependentUpon>DecoratorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseForm\EducationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBaseForm\EducationForm.Designer.cs">
+      <DependentUpon>EducationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseForm\EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBaseForm\EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseForm\ParkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBaseForm\ParkForm.Designer.cs">
+      <DependentUpon>ParkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseForm\PlantsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBaseForm\PlantsForm.Designer.cs">
+      <DependentUpon>PlantsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseForm\TypePlantsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBaseForm\TypePlantsForm.Designer.cs">
+      <DependentUpon>TypePlantsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseForm\WateringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBaseForm\WateringForm.Designer.cs">
+      <DependentUpon>WateringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseForm\WorkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBaseForm\WorkForm.Designer.cs">
+      <DependentUpon>WorkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseForm\ZonesParksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBaseForm\ZonesParksForm.Designer.cs">
+      <DependentUpon>ZonesParksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParkDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParkDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Query\InfoEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\InfoEmployees.Designer.cs">
+      <DependentUpon>InfoEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\InfoPlantsTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\InfoPlantsTime.Designer.cs">
+      <DependentUpon>InfoPlantsTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\InfoPlantsType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\InfoPlantsType.Designer.cs">
+      <DependentUpon>InfoPlantsType.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DataBaseForm\DecoratorsForm.resx">
+      <DependentUpon>DecoratorsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataBaseForm\EducationForm.resx">
+      <DependentUpon>EducationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataBaseForm\EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataBaseForm\ParkForm.resx">
+      <DependentUpon>ParkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataBaseForm\PlantsForm.resx">
+      <DependentUpon>PlantsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataBaseForm\TypePlantsForm.resx">
+      <DependentUpon>TypePlantsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataBaseForm\WateringForm.resx">
+      <DependentUpon>WateringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataBaseForm\WorkForm.resx">
+      <DependentUpon>WorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataBaseForm\ZonesParksForm.resx">
+      <DependentUpon>ZonesParksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\InfoEmployees.resx">
+      <DependentUpon>InfoEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\InfoPlantsTime.resx">
+      <DependentUpon>InfoPlantsTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\InfoPlantsType.resx">
+      <DependentUpon>InfoPlantsType.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ParkDataSet.xsc">
+      <DependentUpon>ParkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ParkDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ParkDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ParkDataSet.xss">
+      <DependentUpon>ParkDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -70,6 +205,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\121.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-translate-detected_10250-1955.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree-1716991_1280.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
